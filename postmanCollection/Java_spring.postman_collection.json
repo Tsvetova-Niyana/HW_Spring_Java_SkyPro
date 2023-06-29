@@ -1,0 +1,595 @@
+{
+	"info": {
+		"_postman_id": "fcefa486-7d53-45c9-ba2f-0244177bbad4",
+		"name": "Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19876906"
+	},
+	"item": [
+		{
+			"name": "welcome_page",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}",
+					"host": [
+						"{{path_resource}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_plus",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/plus?num1=5&num2=5",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"plus"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5"
+						},
+						{
+							"key": "num2",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_plus_without_one_params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/plus?num1=5",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"plus"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5"
+						},
+						{
+							"key": "num2",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_plus_without_two_params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/plus",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"plus"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "num2",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_minus",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/minus?num1=5&num2=5",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"minus"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5"
+						},
+						{
+							"key": "num2",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_minus_without_one_params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/minus?num2=5",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"minus"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "num2",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_minus_without_two_params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/minus",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"minus"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "num2",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_multiply",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/multiply?num1=5&num2=5",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"multiply"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5"
+						},
+						{
+							"key": "num2",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_multiply_without_one_params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/multiply?num1=5",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"multiply"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5"
+						},
+						{
+							"key": "num2",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_multiply_without_two_params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/multiply?num1=5",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"multiply"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5"
+						},
+						{
+							"key": "num2",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_divide",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/divide?num1=5&num2=5",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"divide"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5"
+						},
+						{
+							"key": "num2",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_divide_zero",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/divide?num1=5&num2=0",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"divide"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5"
+						},
+						{
+							"key": "num2",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_divide_without_one_params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/divide?num2=3",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"divide"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "num2",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_divide_without_two_params",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path_resource}}/divide",
+					"host": [
+						"{{path_resource}}"
+					],
+					"path": [
+						"divide"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "num2",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "path_resource",
+			"value": "http://localhost:8080/calculator",
+			"type": "string"
+		}
+	]
+}
